@@ -25,11 +25,11 @@ class Product(db.Model):
 
     def __init__(self, product_name, product_price):
         self.product_name = product_name
-        self.price = price
+        self.product_price = product_price
 
 class ProductSchema(ma.Schema):
     class Meta:
-        fields = ("id", "product_name", "product_price")
+        fields = ("product_id", "product_name", "product_price")
 
 product_schema = ProductSchema()
 products_schema = ProductSchema(many=True)
@@ -43,6 +43,18 @@ def get_products():
     all_products = Product.query.all()
     result = products_schema.dump(all_products)
     return jsonify(result.data)
+
+@app.route("/add-product" , methods=["POST"])
+def add_product():
+    product_name = request.json["product_name"]
+    product_price = request.json["product_price"]
+
+    new_product = Product(product_name, product_price)
+
+    db.session.add(new_product)
+    db.session.commit()
+
+    return jsonify("PRODUCT CREATED")    
 
 
 if __name__ =="__main__":
