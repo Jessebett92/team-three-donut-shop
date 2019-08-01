@@ -1,0 +1,56 @@
+.auth-page-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-image: linear-gradient(to bottom right, #bb9395, #b16367);
+  height: 100%;
+
+  .auth-welcome {
+    margin: 2em;
+  }
+
+  .login-component-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-items: center;
+    grid-gap: 2em;
+    width: 70%;
+    height: 50%;
+
+    .auth-left {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 100%;
+        border-radius: 20px;
+      }
+    }
+
+    .auth-right {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 90%;
+      height: 70%;
+
+      .auth-input {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 100%;
+        width: 80%;
+
+        input {
+          border: none;
+          border-radius: 10px;
+          padding: 10px;
+          font-weight: 900;
+        }
+      }
+    }
+  }
+}

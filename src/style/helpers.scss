@@ -1,0 +1,11 @@
+.btn {
+  width: 80%;
+  border: none;
+  background-color: lightseagreen;
+  font-weight: 900;
+  align-self: center;
+
+  &:hover {
+    background-color: darkseagreen;
+  }
+}
