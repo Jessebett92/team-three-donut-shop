@@ -1,0 +1,100 @@
+.doughnut-item-wrapper {
+  height: calc(100vh - 270px);
+  display: flex;
+  justify-content: center;
+
+  .main-product-wrapper {
+    margin-top: 40px;
+    height: 400px;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 15px;
+
+    .product-of-the-day {
+      width: auto;
+      border: 1px solid $paynes-gray;
+      box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .product-info-wrapper {
+      width: 100%;
+      border: 1px solid $paynes-gray;
+      box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.5);
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+
+      .buy-add-to-cart-wrapper {
+        height: 60%;
+        width: 20%;
+        border: 1px solid $vivid-gerulean;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h1 {
+          font-family: sans-serif;
+          font-size: 1.5em;
+          color: $paynes-gray;
+        }
+
+        button {
+          height: 40px;
+          width: 70%;
+          margin-top: 15px;
+          color: white;
+          font-size: 1em;
+          font-weight: 700;
+          cursor: pointer;
+          background-color: $vivid-gerulean;
+          outline: none;
+          border: none;
+          border-radius: 3px;
+          transition: 0.5s ease-in-out;
+
+          &:hover {
+            background-color: $egyption-blue;
+          }
+        }
+      }
+
+      .product-description {
+        height: 85%;
+        width: 70%;
+        border: 1px solid $vivid-gerulean;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .image-wrapper {
+          height: 60%;
+          width: 50%;
+          border-bottom: 1px solid $vivid-gerulean;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          .product-image-of-the-day {
+            height: 90%;
+            width: auto;
+          }
+        }
+
+        h1 {
+          height: 40%;
+          width: 90%;
+          font-family: sans-serif;
+          font-size: 1em;
+          font-weight: 600;
+          letter-spacing: 0.5px;
+        }
+      }
+    }
+  }
+}
